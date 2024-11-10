@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+    <body>
+        <div class="container-fluid">
+            <div id="wrap">
+                <div class="row">
+                    <div class="col" style="width: 100%; padding-left: .75vw; margin-top: 0px; border-left: 0;border-right: 0;border-top: 0;">
+                        <h2>Thank you for using this contacts list!</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" style="width: 100%; padding-left: .75vw; margin-top: 0px; border-left: 0;border-right: 0;border-top: 0;"><h1><!-- Header -->Contacts List:</h1>
+                    </div>
+                </div>
+                <div class="row" style="width: 50vw; height: 80vh;">
+                    <div class="col" style="border-left: 0;border-top: 0; padding: 5px; width: 100vw;"><!-- <h3 style="margin-bottom: 0px;">Links</h3> -->
+                        <table>
+                            <tr>
+                                <th style="height: 50px;">Slot #</th>
+                                <th style="height: 50px;">Number</th>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>Arnold</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Sly</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Dwayne</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Vin</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>JCVD</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Steven</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr style="width: 100%; height: 4px; margin: 0px;" color="#3a3321">
+        <div id="Footer"><!-- Footer -->
+            <p style="font-size: 70%; float:right;margin: 0;padding: 5px;">This page created as academic activity only</p>
+        </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        let names = ['Arnold', 'Sly', 'Dwayne', 'Vin', 'JCVD', 'Steven']
+        let keepPlaying = true;
+        let nCheck = true;
+        let resume = true;
+        while(nCheck == true){
+            iCount = prompt('Please provide and Entry #');
+            if(iCount > names.length){
+                resume = prompt('That Entry is not in the Database. View another Entry (y/n)?')
+            } else{
+                resume = prompt(`You selected ${names[iCount]}.  View another Entry (y/n)?`)
+            }
+            if(resume.toLowerCase() == 'n'){
+                nCheck = false;
+            } else{
+                nCheck = true;
+            }
+        }
+        });
+    </script>
+</body>
+</html>
